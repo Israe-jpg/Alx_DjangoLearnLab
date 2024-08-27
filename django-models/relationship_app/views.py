@@ -36,6 +36,8 @@ class LoginView(auth_views.LoginView):
 class LogoutView(auth_views.LogoutView):
     template_name = 'logout.html'
 
+relationship_app/member_view.html", "relationship_app/librarian_view.html", "relationship_app/admin_view.html"]
+
 # Registration View - using a custom view based on Django's UserCreationForm
 class RegisterView(CreateView):
     template_name = 'relationship_app/register.html'
