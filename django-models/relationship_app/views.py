@@ -8,6 +8,7 @@ from django.views.generic.edit import CreateView
 from django.contrib.auth import login
 
 # Login View - using Django's built-in view
+
 class LoginView(auth_views.LoginView):
     template_name = 'login.html'
 
@@ -17,13 +18,15 @@ class LogoutView(auth_views.LogoutView):
 
 # Registration View - using a custom view based on Django's UserCreationForm
 class RegisterView(CreateView):
-    template_name = 'register.html'
-    form_class = UserCreationForm
+    template_name = 'relationship_app/register.html'
+    form_class = UserCreationForm()
     success_url = reverse_lazy('login')
+     
 
 def list_books(request):
     books = Book.objects.all()
     return render(request, 'relationship_app/list_books.html', {'books': books})
+    
 
 from django.views.generic import DetailView
 from django.views.generic.detail import DetailView
