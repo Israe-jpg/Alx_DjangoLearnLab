@@ -131,7 +131,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Directories where Django will look for additional static files
 STATICFILES_DIRS = [
-    BASE_DIR / "blog" / "static",  # Adjust the path as necessary
+    BASE_DIR  / "static",  # Adjust the path as necessary
 ]
 
 # settings.py
