@@ -6,6 +6,12 @@ from django.contrib.auth.views import LoginView, LogoutView
 from .forms import SignUpForm, ProfileForm  
 from .models import Profile
 
+
+# Home view - For the home page after login or for general use
+def home(request):
+    return render(request, 'home.html')
+
+    
 # Registration view
 def register(request):
     if request.method == 'POST':
